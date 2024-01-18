@@ -1,0 +1,38 @@
+
+<div class="w-full flex items-center py-[60px] justify-center">
+    
+    <div class="w-1/2 flex-col space-y-4 register relative z-100">
+    <h2 class = "text-2xl text-center font-bold text-gray-900 ">
+        Se connectez
+    </h2>
+    <form  class = "flex w-full flex-col space-y-3">
+        <input  [(ngModel)]="username" name="username"  placeholder = "Nom d'utilisateur" type="text" class = "focus:border-main placeholder:text-xs text-sm p-2 border border-gray-100 outline-none text-gray-600" />
+        <input  [(ngModel)]="password"  name="password"  placeholder = "Password" type="password" class = "focus:border-main placeholder:text-xs text-sm p-2 border border-gray-100 outline-none text-gray-600" />
+
+        <button (click)="onSubmit()" class = "bg-main text-white flex items-center justify-center py-2 rounded text-sm" >
+                <span>Se connectez</span>
+        </button>
+    </form>
+    <div class="grid grid-cols-3 gap-5">
+        <div class="cursor-pointer bg-red-600 text-white text-lg drop-shadow-md flex justify-center py-2 rounded">
+            <i class='bx bxl-google-plus'></i>
+        </div>
+        <div class="cursor-pointer bg-blue-600 text-white text-lg drop-shadow-md flex justify-center py-2 rounded">
+            <i class='bx bxl-facebook' ></i>
+        </div>
+        <div class="cursor-pointer border border-blue-500 text-white text-lg drop-shadow-md flex justify-center py-2 rounded">
+            <i class='bx bxl-twitter text-blue-500' ></i>
+        </div>
+    </div>
+    <div class = "flex items-center w-full justify-between" >
+        <a href="/auth"  class = "text-sm hover:text-main cursor-pointer font-semibold duration-300" >
+            S'inscrir !!
+        </a>
+        <p class = "text-sm hover:text-main cursor-pointer font-semibold duration-300" >
+            Mot de passe oublier ?
+        </p>
+    </div>
+
+</div>
+
+</div>

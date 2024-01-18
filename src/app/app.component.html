@@ -1,0 +1,117 @@
+<div class=''>
+  <div class="bg-main text-white font-poppins text-xs xl:text-sm  py-2 flex items-center justify-between space-x-7 px-5">
+      <div class='flex items-center space-x-2'>
+          <i class='bx bxs-phone'></i>
+          <p>07 01 84 56 43</p>
+      </div>
+      <p class='hidden md:flex'>Don’t hesitate to contact us</p>
+      <div class='flex itms-center space-x-2'>
+          <i class='bx bxl-pinterest' ></i>
+          <i class='bx bxl-github' ></i>
+          <i class='bx bxl-facebook' ></i>
+          <i class='bx bxl-instagram' ></i>
+      </div>
+  </div>
+
+  <div class="flex  bg-white font-poppins text-sm  px-5 shadow-sm  py-4 text-gray-600 header select-none">
+      <div class="flex items-center justify-between space-x-10 w-full">
+          <img src="../assets/images/logo.png" class="w-[80px] " />
+          <nav class="md:flex items-center space-x-8 hidden font-bold">
+              <a href="" class=" text-main cursor-pointer">Welcome</a>
+              <a href="/terrain" *ngIf="hasToken && role === 'clt'"  class=" cursor-pointer">
+                Terrain
+              </a>
+              <a href="/tnb" *ngIf="hasToken && role === 'clt'"  class=" cursor-pointer">
+                Calculator TNB
+              </a>
+              <a href="/cat" *ngIf="hasToken && role === 'adm'"  class=" cursor-pointer">
+                Category
+              </a>
+              <a href="/taux" *ngIf="hasToken && role === 'adm'"  class=" cursor-pointer">
+                Taxe
+              </a>
+              <a href="/redev" *ngIf="hasToken && role === 'adm'"  class=" cursor-pointer">
+                Redevable
+              </a>
+              <a  class=" cursor-pointer">About Us</a>
+              <a  class=" cursor-pointer">Contact Us</a>
+        
+              <a  *ngIf="!hasToken" href="/login">
+
+                <i  class='bx bx-user  text-xl cursor-pointer hover:text-main hover:-translate-y-1 duration-300'></i>
+              </a>
+
+              <a  *ngIf="hasToken" href="">
+                {{ username }}
+              </a>
+
+              <a (click)="logout()" *ngIf="hasToken" >
+
+                <i  class='bx bx-log-out  text-xl cursor-pointer hover:text-main hover:-translate-y-1 duration-300'></i>
+              </a>
+
+
+          </nav>
+          <i class='bx bx-menu-alt-right text-lg cursor-pointer flex lg:hidden '></i>
+      </div>
+  </div>
+
+  
+
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="flex flex-col w-full font-poppins bg-custBlue py-10 px-16 text-white">
+  <div class="flex items-center justify-between border-b pb-8 border-white">
+    <img src="../assets/images/wlogo.png" alt=""  class="w-[80px]"/>
+    <p class='text-xs'>© 2016 TAX.COM. ALL RIGHTS RESEVED</p>
+  </div>
+  <div class='pt-8 flex items-center justify-between'>
+
+    <div class='flex flex-col space-y-3'>
+
+      <div class="flex items-center space-x-4">
+        <h3 class='font-bold'>ABOUT</h3>
+        <p class='text-xs'>Our Company | Careers |  Advertising |  Press Room | Trademarks | Terms of service | Privacy Policy </p>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <h3 class='font-bold'>SUPPORT AND CONTACT</h3>
+        <p class='text-xs'>Customer Support Contacts | Feedback | Help | Sitemap  </p>
+      </div>
+
+      <div class="flex items-center space-x-9">
+        <h3 class='font-bold'>STAY CONNECTED</h3>
+        <div class='flex items-center space-x-5'>
+            <div class='flex items-center space-x-2'>
+              <img src="../assets/images/facebook.png" alt="" />
+              <p class='text-xs'>Facebook</p>
+            </div>
+            <div class='flex items-center space-x-2'>
+              <img src="../assets/images/insta.png" alt="" />
+              <p class='text-xs'>Instagram</p>
+            </div>
+            <div class='flex items-center space-x-2'>
+              <img src="../assets/images/twitter.png" alt="" />
+              <p class='text-xs'>Twitter</p>
+            </div>
+            <div class='flex items-center space-x-2'>
+              <img src="../assets/images/in.png" alt="" />
+              <p class='text-xs'>LinkdIn</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col space-y-3 border-l pl-6 border-white">
+        <h3 class='font-bold'>TAXE DASHBOARD</h3>
+        <p class='text-xs'>Professional</p>
+        <p class='text-xs'>Subscriber Login</p>
+    </div>
+
+
+
+  </div>
+</div>
+
